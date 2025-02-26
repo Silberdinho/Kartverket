@@ -1,0 +1,106 @@
+﻿﻿@using Microsoft.AspNetCore.Identity
+@using Kartverket.Models
+@inject SignInManager<Users> signInManager
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Nettside</title>
+
+    @* Importere Bootstrap + styling *@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/verticalBtn.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin="" />
+</head>
+<body>
+    <header>
+        @* Metadata som chorset og viewport er satt på riktig tegnkoding og responsiv design *@
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            @* Navigeringsbar på nettsiden, som inneholder Kartverket logoen, som er i tillegg interaktiv -> fører til hjemmesiden *@
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/kartverket.svg" alt="Kartverket Logo" style="height: 70px;" />
+                </a>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="mainNavBar">
+                    @* Viser alle mulige sider som brukeren kan navigere seg selv til *@
+                    <ul class="navbar-nav flex-grow-1">
+
+                        @if (signInManager.IsSignedIn(User) && (User.IsInRole("PrivateUser") || User.IsInRole("Caseworker")))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="RegisterAreaChange">Register Area Change</a>
+                            </li>
+                        }
+
+                        @if (signInManager.IsSignedIn(User) && (User.IsInRole("Caseworker")))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="AreaChangeOverview"> Sak oversikt </a>
+                            </li>
+                        }
+
+                        @if (signInManager.IsSignedIn(User) && (User.IsInRole("PrivateUser")))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="UserSubmitHistory">Mine saker</a>
+                            </li>
+                        }
+
+                        <partial name="_LoginPartial" />
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            @* Footer kontainer som viser informasjon om Kartverket *@
+            <div class="footer-section">
+                <img src="~/images/kartverket.svg" alt="Kartverket Logo" class="logo" style="height: 70px">
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt oss</h4>
+                <p>Telefon: <a href="tel:32118000">32 11 80 00</a></p>
+                <p>E-post: <a href="mailto:post@kartverket.no">post@kartverket.no</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Hjelp</h4>
+                <p><a href="#">Driftsmeldinger</a></p>
+                <p><a href="#">Ofte stilte spørsmål</a></p>
+                <p><a href="#">Skjemaer</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Aktuelt</h4>
+                <p><a href="#">Arrangementer og kurs</a></p>
+                <p><a href="#">Nyheter</a></p>
+                <p><a href="#">Ledige stillinger</a></p>
+                <p><a href="#">Presse </a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script> @* Ekterne javascript biblioteker som inkluderer jQuery, Bootstrap Javascript, verticalbtn.js, for å tilpasse funskjonalitet. *@
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js?ver=1.0"></script>
+    <script src="~/js/verticalBtn.js" asp-append-version="true"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+
+    @await RenderSectionAsync("Scripts", required: false) @* Mulighet til å legge side spesifikke script *@
+</body>
+</html>
