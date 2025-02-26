@@ -1,4 +1,4 @@
-﻿﻿.account-container {
+﻿.account-container {
     background-color: rgba(208, 236, 214, 1);
     background-size: cover;
     background-position: center;
@@ -21,7 +21,7 @@
     opacity: .9;
 }
 
-/ Login and register btn*/
+/* Login and register btn*/
 .btn-success {
     background-color: rgba(21, 102, 48, 1);
     border-color: rgba(21, 102, 48, 1);
