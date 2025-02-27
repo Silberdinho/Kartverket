@@ -34,31 +34,44 @@ namespace Kartverket.Services
         /// <returns>A Task representing the asynchronous operation</returns>
         public async Task SendEmailAsync(string email, string subject, string message)
         {
-            // Create a new SMTP client using the configuration settings
-            var smtpClient = new SmtpClient(_configuration["EmailSettings:SmtpServer"])
+            string smtpServer = _configuration["SMTP_SERVER"];
+            string smtpPortRaw = _configuration["SMTP_PORT"];
+            string smtpUsername = _configuration["SMTP_USERNAME"];
+            string smtpPassword = _configuration["SMTP_PASSWORD"];
+            string smtpFromEmail = _configuration["SMTP_FROM_EMAIL"];
+
+            // Debugging logs
+            Console.WriteLine($"SMTP_SERVER: {smtpServer}");
+            Console.WriteLine($"SMTP_PORT: {smtpPortRaw}");
+            Console.WriteLine($"SMTP_USERNAME: {smtpUsername}");
+            Console.WriteLine($"SMTP_PASSWORD: {smtpPassword}");
+            Console.WriteLine($"SMTP_FROM_EMAIL: {smtpFromEmail}");
+
+            if (!int.TryParse(smtpPortRaw, out int smtpPort))
             {
-                Port = int.Parse(_configuration["EmailSettings:Port"]), // Set SMTP port from configuration
-                Credentials = new NetworkCredential(
-                    _configuration["EmailSettings:Username"], // Set SMTP username from configuration
-                    _configuration["EmailSettings:Password"] // Set SMTP password from configuration
-                    ),
-                EnableSsl = true // Enable SSL for secure email transmission
+                throw new Exception($"Invalid SMTP_PORT value: {smtpPortRaw}");
+            }
+
+            var smtpClient = new SmtpClient(smtpServer)
+            {
+                Port = smtpPort,
+                Credentials = new NetworkCredential(smtpUsername, smtpPassword),
+                EnableSsl = true
             };
 
-            // Create a new MailMessage with the specified sender, recipient, subject, and body
             var mailMessage = new MailMessage
             {
-                From = new MailAddress(_configuration["EmailSettings:FromEmail"]), // Sender email from configuration
-                Subject = subject, // Set email subject
-                Body = message, // Set email body
-                IsBodyHtml = true // Set the email body to HTML format
+                From = new MailAddress(smtpFromEmail),
+                Subject = subject,
+                Body = message,
+                IsBodyHtml = true
             };
 
-            // Add recipient email to the message
             mailMessage.To.Add(email);
 
-            // Asynchronously send the email using the SMTP client
             await smtpClient.SendMailAsync(mailMessage);
         }
+
     }
-}
+
+    }
