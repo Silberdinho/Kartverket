@@ -92,29 +92,52 @@ Del 3,
 Steg for steg; Forklaringer av nettsidens funksjoner - Privatbruker -->
 
 Steg 1) Her er bilde av forsiden til vår nettside, hvor man kommer til enkel og praktis side, hvor noe av det første man ser er en knapp hvor man har mulighet til å kunne melde inn endring i kart. Øverst på sidne til høyre er det en login og register knapp, hvor du kan også logge deg inn i en eksisterende kartbruker/caseworker eller registrere deg som en ny kartbruker.
+
 ![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/forside_til_nettside.png)
 
 Steg 2) Når du trykker på "melde inn endringer" knappen vil du komme til denne sidne hvor du velger om du er en privatperson eller ansatt.
 
+![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/er_du_privat_person_eller_ansatt.png)
+
 Steg 3) Når du som en privatkunde vil logge inn i en eksisterende konto kommer du frem til denne siden, hvor du skriver inn username og passordet ditt. Dersom du ikke har laget en konto vil du kunne få et forslag i grønn skrift under passord, hvor du har mulighet til å registrere som en ny konto. I tillegg kan du endre passordet ditt hvis du har glemt passordet du lagde.
 
-Stef 4) Som en ny bruker må du registrere deg og lage en konto, og da vil du få opp denne registrerings siden opp. Du fyller ut Navn, Etternavn, Brukernavn, E-postadresse, passord og gjenta passord. Husk at det er viktig å legge til en virkende/eksisterende e-postadresse, fordi hvis du glemmer passordet ditt senere
+![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/logg_til_kart_endringer_hos_bruker.png)
+
+Stef 4) Som en ny bruker må du registrere deg og lage en konto, og da vil du få opp denne registrerings siden opp. Du fyller ut Navn, Etternavn, Brukernavn, E-postadresse, passord og gjenta passord. Husk at det er viktig å legge til en virkende/eksisterende e-postadresse, fordi hvis du glemmer passordet ditt senere.
+
+![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/registrering_som_en_ny_bruker.png)
 
 Steg 5) Etter at du har registrert deg ferdig som en bruker vil du få opp en side med et kart hvor til høyre ligger det detalj informasjon om endringene du vil sende inn, for eksempel som breddegrad, engdegrad, eskrivelse, kommunenavn og fylke. Etter at du har fylt ut boksene kan du sende inn endringene.
 
+![prosjekt] (https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/kartet_med_legge_til_endring_.png)
+
 Steg 6) Etter dette vil du få opp denne grønne boksen, som bekrefter at endringene du har sendt har gått gjennom og blitt sendt inn med meldingen "Your report has been submitted successfully!", deretter kan du trykke på blå knappen under for å navigere deg tilbake til hjemmesiden.
+
+![prosjekt] (https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/bekreftelse_endirng_er_sendt.png)
 
 Steg 7) Det er en knapp øverst til venstre hvor det står mine saker, hvor du kan se loggen til sakene du har sendt inn. Du kan for eksempel se på saksbehnadlingsstatus og saksbehandler, og vente til du får svar fra en caseworker om endringer.
 
+(BILDE I MAPPE)
+
 Steg 8) Når du skal et nytt password så får du opp dette, hvor du skriver inn en eksisterende e-postadresse, får å kunne få reset confirmation på email.
+
+![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/glemt_passord_siden_hos_bruker_og_caseworker.png)
 
 Steg 9) Nå vil du få opp "Forgot password confirmation", som forteller deg at du skal nå kunne få en melding under som sier sjekk emailen din for å kunne tilbakestille din password.
 
+![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/forgot_password_confirm_--_email.png)
+
 Steg 10) Slik vil emailen se ut når du får den, også må du trykke på den blåe skriften som står "here" som navigerer deg tilbake til nettsiden.
+
+![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/fa_det_pa_email_ogsa_reset.png)
 
 Steg 11) Når du kommer til denne siden, kan du endre passordet ditt.
 
+![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/na_kan_du_skrive_nye_passordet_ditt.png)
+
 Steg 12) Senere vil du få opp dette som en bekreftelse på at du har endret din password, så kan du trykke på logge inn også skrive det nye passordet ditt. Slik fungerer det for både privat brukere og caseworkers når det gjelder endring av password.
+
+![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/passordet_ditt_er_endret_na.png)
 
 
 
@@ -124,12 +147,19 @@ Steg for steg; Forklaringer av nettsidens funksjoner - Caseworker -->
 
 Steg 1) Når du vil logge inn som en caseworker, så må du logge inn via ansatt bruker som inneholder Username og password. Du får også tilgang til "forgot password" hvis du glemmer passordet ditt, og da trengs det e-postadresse hvor du får confirmation for å lage et nytt passord.
 
+(BILDE I MAPPE)
+
 Steg 2) Forsiden til en caseworker ser nesten helt lik ut som på en Privat bruker sin forside, forskjellen er bare at øverst til høyre ligger det sak oversikt på caseworker forsiden, men ellers er mye av det lik ut.
+
+![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/forside_til_caseworker.png)
 
 Steg 3) Inne på Sak Oversikt vil en caseworker kunne få opp alle saker med deres rapportID, endringer, beskrivelse, kommunenavn, fylkenavn, status og handlinger. PÅ handlinger så har en caseworker mulighet til å kunne edit, delete eller finish en sak. Privatbruker vil kunne se oppdateringen i status, dersom du sletter, endrer eller blir ferdig med en sak (dette er som en sporingsstatus for privatkunder for å kunne holde seg oppdaterte med sakene sine).
 
+(BILDE I MAPPE)
+
 Steg 4) Når du trykker på Register Area Change vil du som caseworker kunne få muligheten til å endre på de endringene som må endres på kartet etter at du godkjenner en tilfeldig "endring i kart" sak. Når du trykker på save changes vil kartet oppdateres og se riktig ut.
 
+(BILDE I MAPPE)
 
 
 Del 5:
@@ -153,3 +183,5 @@ Del 6,
 Unittesting -->
 
 Unitestingen bekrefter for oss at isolerte deler av koden fungerer. I dette prosjektet har vi testet noen av metodene til HomeControlleren. Praktisk informasjon til testing finner du i del 2. 
+
+![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/Unitesting.png)
