@@ -90,7 +90,7 @@ namespace Kartverket.Controllers
             catch (Exception ex)
             {
                 // Vis en generell feilmelding til brukeren
-                ModelState.AddModelError(string.Empty, "En uventet feil oppstod. Vennligst prøv igjen.");
+                ModelState.AddModelError(string.Empty, "Dette brukernavnet er allerede i bruk, vennligst forsøk igjen.");
             }
 
             return View(registerViewModel);
