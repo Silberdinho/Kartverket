@@ -20,7 +20,7 @@
         <form asp-action="RegisterAreaChange" method="post" style="display: flex; flex-direction: column; gap: 15px;">        
 
             @* GeoJSON Data (hidden) *@
-           @* <input type="hidden" id="geoJsonInput" asp-for="ViewAreaJson" /> *@
+           <input type="hidden" id="geoJsonInput" asp-for="ViewAreaJson" hidden/> 
 
             @* Latitude *@
             <label for="latitude" style="color: white;">Breddegrad</label>
@@ -124,6 +124,9 @@
 
             var geoLon = geoCenteredData.geometry.coordinates[0];
             var geoLat = geoCenteredData.geometry.coordinates[1];
+
+            //document.getElementById('latitude').value = geoLat;
+            //document.getElementById('longitude').value = geoLon;
 
             console.log(geoCenteredData + geoLon + geoLat);
 
