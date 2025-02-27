@@ -92,6 +92,7 @@ Del 3,
 Steg for steg; Forklaringer av nettsidens funksjoner - Privatbruker -->
 
 Steg 1) Her er bilde av forsiden til vår nettside, hvor man kommer til enkel og praktis side, hvor noe av det første man ser er en knapp hvor man har mulighet til å kunne melde inn endring i kart. Øverst på sidne til høyre er det en login og register knapp, hvor du kan også logge deg inn i en eksisterende kartbruker/caseworker eller registrere deg som en ny kartbruker.
+![prosjekt](https://github.com/Silberdinho/Kartverket/blob/master/READMEimages/bilder/forside_til_nettside.png)
 
 Steg 2) Når du trykker på "melde inn endringer" knappen vil du komme til denne sidne hvor du velger om du er en privatperson eller ansatt.
 
